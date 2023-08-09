@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title%} {{title}} {% endblock %}
+
+{%block story_title%}{{title}}{%endblock%}
+
+<!-- This inherits from the base.html -->
+{% block input %}
+<!-- Added this line to get title input  -->
+<input type ="hidden" name="story_id" value="{{title}}">
+
+{% endblock %}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Stories</title>
+</head>
+<body>
+    <h1>Select Stories</h1>
+    <!-- When submitted, it goes to /question page  -->
+    <form action="/question">
+    <select name="story_id">
+        <!-- Received stories from the server and loop through to stories.  -->
+        {% for story in stories%}
+            <option>
+                <!-- This is where it shows story title on drop down menu -->
+                {{story.title}}
+            </option>
+        {% endfor %}
+    </select>
+    <button>Submit!</button>
+
+    </form>
+    
+
+</body>
+</html>

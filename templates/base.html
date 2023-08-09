@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- This creates parents template  -->
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <h1>{%block story_title%}{%endblock%}</h1>
+    <form action="/story">
+        {% for prompt in prompts %}
+        <p> {{prompt}} :
+            <!-- this send input to story -->
+            <input name="{{prompt}}">
+        </p>
+        {% endfor %}
+        {% block input %}
+        {% endblock %}
+        <button>Submit!</button>
+    </form>
+    
+</body>
+</html>
